@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+def number_keys(a_dictionary):
+    num = 0
+    list_keys = list(a_dictionary.keys())
 
-def count_keys(dictionary):
-    count = sum(1 for _ in dictionary.keys())
-    return count
+    for i in list_keys:
+        num += 1
+
+    return (num)

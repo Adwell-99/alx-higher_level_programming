@@ -1,10 +1,9 @@
 #!/usr/bin/python3
+def uniq_add(my_list=[]):
+    uniq_list = set(my_list)
+    num = 0
 
-def unique_sum_alternative(my_list=[]):
-    # Check if the list is empty
-    if not my_list:
-        return 0
+    for i in uniq_list:
+        num += i
 
-    # Use the sum function along with a set comprehension to calculate the sum of unique elements
-    return sum({x for x in my_list})
-
+    return (num)

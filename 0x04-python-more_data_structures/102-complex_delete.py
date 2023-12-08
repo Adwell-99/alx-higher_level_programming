@@ -1,3 +1,9 @@
 #!/usr/bin/python3
-def remove_keys_with_value(input_dict, value):
-    return {key: val for key, val in input_dict.items() if val != value}
+def complex_delete(a_dictionary, value):
+    list_keys = list(a_dictionary.keys())
+
+    for value_dic in list_keys:
+        if value == a_dictionary.get(value_dic):
+            del a_dictionary[value_dic]
+
+    return (a_dictionary)

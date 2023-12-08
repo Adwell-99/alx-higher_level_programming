@@ -1,4 +1,5 @@
 #!/usr/bin/python3 
-def update_dictionary(a_dictionary, key, value):  
-   if a_dictionary[key] = value 
-return (a_dictionary) 
+def modify_dictionary(dictionary, key, value):
+    updated_dict = dictionary.copy()
+    updated_dict[key] = value
+    return updated_dict

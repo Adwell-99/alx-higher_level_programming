@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-
-def calculate_weighted_average_another_form(data):
-    if not data:
+def calculate_weighted_average(another_list=[]):
+    if not another_list:
         return 0
 
-    numerator = sum(map(lambda x: x[0] * x[1], data))
-    denominator = sum(map(lambda x: x[1], data))
+    total_score, total_weight = 0, 0
 
-    return numerator / denominator
+    for score, weight in another_list:
+        total_score += score * weight
+        total_weight += weight
+
+    return total_score / total_weight

@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-def alternative_delete(a_dictionary, key=""):
-    a_dictionary.pop(key, None)
-    return a_dictionary
-
+def remove_key(dictionary, key=""):
+    updated_dict = {k: v for k, v in dictionary.items() if k != key}
+    return updated_dict

@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-from functools import reduce
-
-def find_top_score(dictionary):
-    if not dictionary:
+def best_score(a_dictionary):
+    if not a_dictionary:
         return None
 
-    return reduce(lambda x, y: x if dictionary[x] > dictionary[y] else y, dictionary)
+    max_key = max(a_dictionary, key=a_dictionary.get)
+    return max_key
